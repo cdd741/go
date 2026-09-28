@@ -22,10 +22,10 @@ p{margin:0;color:var(--muted);font-size:15px}
 </div>
 <script>
 // ?app=uniuni → runs the "Open UniUni" shortcut (UniUni Driver has no link of its own)
-// ?app=emile  → opens Emile Driver directly (emiledriverapp://)
+// ?app=emile  → runs the "Open Emile" shortcut
 var TARGETS={
   uniuni:{label:'UniUni Driver',cls:'u',url:'shortcuts://run-shortcut?name='+encodeURIComponent('Open UniUni')},
-  emile:{label:'Emile Driver',cls:'e',url:'emiledriverapp://'}
+  emile:{label:'Emile Driver',cls:'e',url:'shortcuts://run-shortcut?name='+encodeURIComponent('Open Emile')}
 };
 var app=(new URLSearchParams(location.search).get('app')||'').toLowerCase();
 var t=TARGETS[app];
